@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: f4t-phpdemo-dep
+  namespace: play
+  labels:
+    app: f4t-phpdemo
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: f4t-phpdemo
+  template:
+    metadata:
+      name: f4t-phpdemo
+      labels:
+        app: f4t-phpdemo
+    spec:
+      containers:
+      - name: f4t-phpdemo-cont
+        image: acrfsregistrydev01.azurecr.io/phpdemo:v5
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "128Mi" #128 MB
+            cpu: "250m" #200 millicpu (.2 cpu or 20% of the cpu)
