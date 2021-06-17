@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: f4t-phpdemo-cont
-        image: acrfsregistrydev01.azurecr.io/phpdemo:v6
+        image: acrfsregistrydev01.azurecr.io/phpdemo:v5
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -27,19 +27,3 @@ spec:
           limits:
             memory: "128Mi" #128 MB
             cpu: "250m" #200 millicpu (.2 cpu or 20% of the cpu)
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: f4t-phpdemo-lb
-  namespace: play
-  labels:
-    app: f4t-phpdemo
-spec:
-  type: LoadBalancer
-  selector:
-    app: f4t-phpdemo
-  ports:
-  - name: http
-    port: 8080 # port exposed to the world
-    targetPort: 80 # port where the container app is listening
