@@ -7,7 +7,7 @@ metadata:
     app: f4t-phpdemo
     tier: frontend
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: f4t-phpdemo
