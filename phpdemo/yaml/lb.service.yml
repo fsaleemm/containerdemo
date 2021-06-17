@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: f4t-phpdemo-lb
+  namespace: play
+  labels:
+    app: f4t-phpdemo
+spec:
+  type: LoadBalancer
+  selector:
+    app: f4t-phpdemo
+  ports:
+  - name: http
+    port: 8080 # port exposed to the world
+    targetPort: 80 # port where the container app is listening
