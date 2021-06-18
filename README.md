@@ -14,7 +14,7 @@ For step 3, use the Port Forwarding method:
 kubectl port-forward svc/argocd-server -n argocd 8081:443
 ```
 
-For step 6 use this git repo and the phphdemo folder to deploy the sample applications.
+For step 6 use this git repo and the phpdemo folder to deploy the sample applications.
 
 Once setup your Argocd setup you can view the deployment and sync them with manifest files in git.
 
@@ -23,8 +23,8 @@ Screenshots:
 Application Setup View:
 ![Initial Setup](/images/s1.PNG)
 
-Deplyment Network View:
+Canary Deployment Network View:
 ![Deployment Network View ](/images/s2.PNG)
 
-Deployment Tree View:
+Canary Deployment Tree View:
 ![Deployment Tree View](/images/s3.PNG)
