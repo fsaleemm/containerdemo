@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: f4t-phpdemo-dep
+  name: f4t-phpdemo-dep-stable
   namespace: play
   labels:
     app: f4t-phpdemo
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: f4t-phpdemo-cont
-        image: acrfsregistrydev01.azurecr.io/phpdemo:v5
+        image: acrfsregistrydev01.azurecr.io/phpdemo:v5 # v5 is stable
         imagePullPolicy: Always
         ports:
         - containerPort: 80

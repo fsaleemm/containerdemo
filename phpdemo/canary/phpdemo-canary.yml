@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: f4t-phpdemo-cont
-        image: acrfsregistrydev01.azurecr.io/phpdemo:v6
+        image: acrfsregistrydev01.azurecr.io/phpdemo:v6 # v6 is canary
         imagePullPolicy: Always
         ports:
         - containerPort: 80
