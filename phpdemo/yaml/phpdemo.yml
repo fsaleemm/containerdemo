@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: f4t-phpdemo-dep
-  namespace: play
   labels:
     app: f4t-phpdemo
     tier: frontend
