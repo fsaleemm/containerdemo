@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: f4t-phpdemo-cont
-        image: acrfsregistrydev01.azurecr.io/phpdemo:v5
+        image: acrf4tdev1.azurecr.io/phpdemo:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
